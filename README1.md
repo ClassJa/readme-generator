@@ -1,31 +1,31 @@
 # Project Title: 
 
 
-## Description 
+## Description: 
 
 
-## Table of Contents
+## Table of Contents: 
 
 
-## Installation
+## Installation Instructions: 
 
 
-## Usage
+## Usage Information: 
 
 
-## Credits
+## Credits: 
 
 
-## License
+## License: 
 
 
-## Badges
+## Badges: 
 
 
-## Features
+## Contributing: 
 
 
-## How to contribute
+## Tests: 
 
 
-## Tests
+## Questions: 
