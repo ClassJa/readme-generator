@@ -34,12 +34,13 @@ inquirer
     },
     {
         type: 'input', 
-        message: 'Credits?',
-        name: 'What are the credits for this project?'
+        message: 'What are the credits for this project?',
+        name: 'credits'
+       
     },
     {
         type: 'input',
-        message: 'What are the badges for this project?',
+        message: 'What are the badges for this project (Optional)?',
         name: 'badges'
     }
 ])
@@ -47,6 +48,7 @@ inquirer
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     
+
 }
 
 // TODO: Create a function to initialize app
