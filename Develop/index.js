@@ -2,11 +2,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { type } = require('os');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const questions = [];
-inquirer
-.prompt([
+const questions = [
     {
         type: 'input',
         message: 'Your project title?',
@@ -42,12 +41,22 @@ inquirer
         type: 'input',
         message: 'What are the badges for this project (Optional)?',
         name: 'badges'
+    },
+    {
+        type: 'list',
+        message: 'Licenses?',
+        name: 'licenses',
+        choices: ['None', 'MIT', ]
+
     }
-])
+];
+inquirer
+.prompt(questions)
+.then(response => writeToFile('README1.md', generateMarkdown(response)))
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
+    return fs.writeFile(fileName, data, err => err ? console.log("error") : console.log("ReadMe created!"))
 
 }
 
