@@ -1,11 +1,18 @@
+const license = require('../index')
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license !== "None") {
-    return 
-    // link for the badges
+  if (response['license'] === license) {
+    return license
   } 
-    return ""
+
+  // come back to this logic if necessary
+  // if (license !== "None") {
+  //   return 
+  //   // link for the badges
+  // } 
+  //   return ""
   
 }
 
@@ -47,13 +54,14 @@ function generateMarkdown(data) {
     ## Badges: ${data.badges}
 
 
-    ## Contributing: 
+    ## Contributing: ${data.credits}
 
 
-    ## Tests: 
+    ## Tests: ${data.test}
 
 
-    ## Questions: `
+    ## Questions: ${data.questions}
+    `
 }
 
 module.exports = generateMarkdown;
