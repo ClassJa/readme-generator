@@ -44,9 +44,6 @@ function generateMarkdown(data) {
     ## Usage Information: ${data.usage}
 
 
-    ## Credits: ${data.credits}
-
-
     ## Badges: ${data.badges}
 
 

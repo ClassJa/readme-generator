@@ -21,15 +21,15 @@ const questions = [
         name: 'test'
     },
     {
-        type: 'inout',
-        message: "What is your github url?",
-        name: 'github'
-    },
-    {
         type: 'input',
         message: 'What is your email?',
         name: 'email'
     },
+    {
+        type: 'input',
+        message: "What is your github url?",
+        name: 'github'
+    },  
     {
         type: 'input', 
         message: 'What are the credits for this project?',
@@ -47,10 +47,10 @@ const questions = [
         name: 'installation',
     },
     {
-        type: 'input',
+        type: 'list',
         message: 'Table of Contents (Optional)?',
         name: 'ToC',
-        
+        choices: ['title', 'license', 'description', 'ToC', 'installation', 'usage', 'credits', 'badges', 'test', 'questions']
     }, 
     {
         type: 'input',
