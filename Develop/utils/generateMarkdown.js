@@ -10,17 +10,24 @@ function renderLicenseBadge(data) {
 // If there is no license, return an empty string
 function renderLicenseLink(licenseName) {
   if (licenseName === 'MIT') {
-    return 'https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt'
+    return `https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt`
   } else if (licenseName === 'Apache License 2.0') {
-    return 'http://www.apache.org/licenses/'
+    return `http://www.apache.org/licenses/`
+  } else {
+    return ""
   }
-  return ""
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
- 
+function renderLicenseSection(licenseInfo) {
+  if (licenseInfo === 'MIT') {
+    return `${licenseInfo}: https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt`
+  } else if (licenseInfo === 'Apache License 2.0') {
+    return `${licenseInfo}: http://www.apache.org/licenses/`
+  } else {
+    return ""
+  }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -43,7 +50,7 @@ function generateMarkdown(data) {
     ## Credits: ${data.credits}
 
 
-    ## License: ${renderLicenseLink(renderLicenseBadge(data))}
+    ## License: ${renderLicenseSection(data.license)}
 
 
     ## Badges: ${data.badges}
