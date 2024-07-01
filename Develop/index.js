@@ -21,8 +21,14 @@ const questions = [
         name: 'test'
     },
     {
-        message: "What are some questions?",
-        name: 'questions'
+        type: 'inout',
+        message: "What is your github url?",
+        name: 'github'
+    },
+    {
+        type: 'input',
+        message: 'What is your email?',
+        name: 'email'
     },
     {
         type: 'input', 

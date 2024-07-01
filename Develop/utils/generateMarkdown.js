@@ -30,6 +30,8 @@ function generateMarkdown(data) {
   return ` 
     # Project Title: ${data.title}
 
+    ## License: ${renderLicenseSection(data)}
+
     ## Description: ${data.description}
 
 
@@ -45,9 +47,6 @@ function generateMarkdown(data) {
     ## Credits: ${data.credits}
 
 
-    ## License: ${renderLicenseSection(data)}
-
-
     ## Badges: ${data.badges}
 
 
@@ -57,7 +56,7 @@ function generateMarkdown(data) {
     ## Tests: ${data.test}
 
 
-    ## Questions: ${data.questions}
+    ## Questions: ${`Github: ${data.github} Email: ${data.email}`}
     `
 }
 
