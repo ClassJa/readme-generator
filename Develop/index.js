@@ -41,9 +41,10 @@ const questions = [
         name: 'installation',
     },
     {
-        type: 'List',
+        type: 'input',
         message: 'Table of Contents (Optional)?',
         name: 'ToC',
+        
     }, 
     {
         type: 'input',
@@ -60,7 +61,7 @@ const questions = [
 ]
 inquirer
 .prompt(questions)
-.then(response => writeToFile(response.title, generateMarkdown(response)))
+.then(response => writeToFile(`${response.title}.md`, generateMarkdown(response)))
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
