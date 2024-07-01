@@ -3,7 +3,14 @@ const license = require('../index')
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(data) {
-    return data['license']
+  if (data['license'] === 'MIT') {
+    return `${data['license']}: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+  } else if (data['license'] === 'Apache License 2.0') {
+    return `${data['license']}: [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+  } else {
+    return ""
+  } 
+    // return data['license']
 }
 
 // TODO: Create a function that returns the license link
