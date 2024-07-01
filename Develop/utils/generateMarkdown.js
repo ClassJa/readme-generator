@@ -4,26 +4,23 @@ const license = require('../index')
 // If there is no license, return an empty string
 function renderLicenseBadge(data) {
     return data['license']
-
-  // come back to this logic if necessary
-  // if (license !== "None") {
-  //   return 
-  //   // link for the badges
-  // } 
-  //   return ""
-  
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  return
+function renderLicenseLink(licenseName) {
+  if (licenseName === 'MIT') {
+    return 'https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt'
+  } else if (licenseName === 'Apache License 2.0') {
+    return 'http://www.apache.org/licenses/'
+  }
+  return ""
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  return 
+ 
 }
 
 // TODO: Create a function to generate markdown for README
@@ -46,7 +43,7 @@ function generateMarkdown(data) {
     ## Credits: ${data.credits}
 
 
-    ## License: ${renderLicenseBadge(data)}
+    ## License: ${renderLicenseLink(renderLicenseBadge(data))}
 
 
     ## Badges: ${data.badges}
