@@ -27,7 +27,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: "What is your github url?",
+        message: "What is your github username?",
         name: 'github'
     },  
     {
@@ -52,11 +52,6 @@ const questions = [
         name: 'ToC',
         choices: ['title', 'license', 'description', 'ToC', 'installation', 'usage', 'credits', 'badges', 'test', 'questions']
     }, 
-    {
-        type: 'input',
-        message: 'What are the badges for this project (Optional)?',
-        name: 'badges'
-    },
     {
         type: 'list',
         message: 'What license did you use?',
