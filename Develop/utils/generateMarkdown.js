@@ -2,10 +2,8 @@ const license = require('../index')
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if (response['license'] === license) {
-    return license
-  } 
+function renderLicenseBadge(data) {
+    return data['license']
 
   // come back to this logic if necessary
   // if (license !== "None") {
@@ -48,7 +46,7 @@ function generateMarkdown(data) {
     ## Credits: ${data.credits}
 
 
-    ## License: ${renderLicenseBadge(data.license)}
+    ## License: ${renderLicenseBadge(data)}
 
 
     ## Badges: ${data.badges}

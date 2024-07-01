@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-// const fs = require('fs');
+const fs = require('fs');
 const { type } = require('os');
 const generateMarkdown = require('./utils/generateMarkdown');
 
@@ -9,28 +9,13 @@ const questions = [
     {
         type: 'input',
         message: 'Your project title?',
-        name: 'title',
+        name: 'title'
     }, 
     {
         type: 'Input',
         message: 'Description of your project?',
-        name: 'description',
-    },
-    {
-        type: 'List',
-        message: 'Table of Contents (Optional)?',
-        name: 'ToC',
+        name: 'description'
     }, 
-    {
-        type: 'input',
-        message: 'Installation Instructions?',
-        name: 'installation',
-    }, 
-    {
-        type: 'input',
-        message: 'Usage of the project?',
-        name: 'usage'
-    },
     {
         message: "Tests for this project",
         name: 'test'
@@ -47,6 +32,21 @@ const questions = [
     },
     {
         type: 'input',
+        message: 'Usage of the project?',
+        name: 'usage'
+    },
+    {
+        type: 'input',
+        message: 'Installation Instructions?',
+        name: 'installation',
+    },
+    {
+        type: 'List',
+        message: 'Table of Contents (Optional)?',
+        name: 'ToC',
+    }, 
+    {
+        type: 'input',
         message: 'What are the badges for this project (Optional)?',
         name: 'badges'
     },
@@ -57,7 +57,7 @@ const questions = [
         choices: ['None', 'MIT', 'Apache License 2.0']
 
     }
-];
+]
 inquirer
 .prompt(questions)
 .then(response => writeToFile(response.title, generateMarkdown(response)))
@@ -69,7 +69,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    
+    // writeToFile()
 }
 
 // Function call to initialize app
