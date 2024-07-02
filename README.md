@@ -7,7 +7,7 @@ This project utilizes javascript and tools like node to dynamically create and d
 ## Usage
 
 https://github.com/ClassJa/readme-generator
-![alt text](image.png)
+<video controls src="readmeGeneratorDemo.mp4" title="Title"></video>
 
 ## Credits 
 Sought out assistance from the websites and resources listed below: 
