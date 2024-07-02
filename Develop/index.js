@@ -48,12 +48,6 @@ const questions = [
     },
     {
         type: 'list',
-        message: 'Table of Contents (Optional)?',
-        name: 'ToC',
-        choices: ['title', 'license', 'description', 'ToC', 'installation', 'usage', 'credits', 'badges', 'test', 'questions']
-    }, 
-    {
-        type: 'list',
         message: 'What license did you use?',
         name: 'license',
         choices: ['None', 'MIT', 'Apache License 2.0']
@@ -72,8 +66,6 @@ function init() {
     inquirer
     .prompt(questions)
     .then(response => writeToFile(`${response.title}.md`, generateMarkdown(response)))
-    // what to do here?
-    // writeToFile()
 }
 
 // Function call to initialize app

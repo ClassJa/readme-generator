@@ -9,8 +9,7 @@ function renderLicenseBadge(data) {
     return `${data['license']}: [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
   } else {
     return ""
-  } 
-    // return data['license']
+  }
 }
 
 // TODO: Create a function that returns the license link
@@ -34,33 +33,48 @@ function renderLicenseSection(licenseInfo) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# Project Title: ${data.title}
+  return `# Title: 
+  ${data.title}
 
-  ## License: ${renderLicenseSection(data)}
-
-  ## Description: ${data.description}
-
-
-  ## Table of Contents: ${data.ToC}
-
-
-  ## Installation Instructions: ${data.installation}
-
-
-  ## Usage Information: ${data.usage}
-
-
-  ## Badges: ${data.badges}
-
-
-  ## Contributing: ${data.credits}
-
-
-  ## Tests: ${data.test}
-
-
-  ## Questions: ${`Github: https://github.com/${data.github} Email: ${data.email}`}
-    `
+  ## License: 
+  ${renderLicenseSection(data)}
+    
+  ## Description:
+  ${data.description}
+    
+  ## Table of Contents: 
+  [Title](#title)
+  
+  [License](#license)
+  
+  [Description](#description)
+  
+  [Tests](#tests)
+  
+  [Installation Instructions](#installation)
+  
+  [Usage Information](#usage-information)
+  
+  [Contributings](#contributing)
+  
+  [Questions](#questions)
+  
+  
+  ## Installation: 
+  ${data.installation}
+  
+  ## Usage-Information:
+  ${data.usage}
+  
+  ## Contributing:
+  ${data.credits}
+  
+  ## Tests:
+  ${data.test}
+  
+  ## Questions: 
+  ${`Github: https://github.com/${data.github} Email: ${data.email}`}`
+  
 }
 
 module.exports = generateMarkdown;
